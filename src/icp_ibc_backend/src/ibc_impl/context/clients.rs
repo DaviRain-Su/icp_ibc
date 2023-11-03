@@ -10,28 +10,8 @@ use ibc::core::ics24_host::identifier::ClientId;
 use ibc::core::ics24_host::path::{ClientConsensusStatePath, ClientStatePath};
 use ibc::core::timestamp::Timestamp;
 use ibc::core::{ContextError, ValidationContext};
-use ibc::mock::client_state::MockClientContext;
 use ibc::Height;
 
-impl MockClientContext for MockContext {
-    type ConversionError = &'static str;
-    type AnyConsensusState = AnyConsensusState;
-
-    fn host_timestamp(&self) -> Result<Timestamp, ContextError> {
-        ValidationContext::host_timestamp(self)
-    }
-
-    fn host_height(&self) -> Result<Height, ContextError> {
-        ValidationContext::host_height(self)
-    }
-
-    fn consensus_state(
-        &self,
-        client_cons_state_path: &ClientConsensusStatePath,
-    ) -> Result<Self::AnyConsensusState, ContextError> {
-        ValidationContext::consensus_state(self, client_cons_state_path)
-    }
-}
 
 impl TmCommonContext for MockContext {
     type ConversionError = &'static str;

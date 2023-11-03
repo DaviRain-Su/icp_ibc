@@ -1,2 +1,0 @@
-pub const DEFAULT_BLOCK_TIME_SECS: u64 = 3;
-pub const CYCLES_NUMBER: u64 = 25_000_000_000;

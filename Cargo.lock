@@ -985,7 +985,6 @@ dependencies = [
  "ibc-proto",
  "ics23",
  "num-traits",
- "parking_lot",
  "primitive-types",
  "prost",
  "schemars",
@@ -997,10 +996,8 @@ dependencies = [
  "tendermint",
  "tendermint-light-client-verifier",
  "tendermint-proto",
- "tendermint-testgen",
  "time",
  "tracing",
- "typed-builder",
  "uint",
 ]
 
